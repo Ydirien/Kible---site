@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="Kible, accueil"><span class="brand-mark" aria-hidden="true">K</span>Kible</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Ouvrir le menu</span><span></span><span></span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+      <a href="/fonctionnalites/" {% if page.url == '/fonctionnalites/' %}aria-current="page"{% endif %}>Fonctionnalités</a>
+      <a href="/tarifs/" {% if page.url == '/tarifs/' %}aria-current="page"{% endif %}>Tarifs</a>
+      <a href="/contact/" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a>
+      <a class="nav-login" href="{{ site.appUrl }}">Se connecter</a>
+      <a class="button button-small" href="{{ site.appUrl }}">S'inscrire <span aria-hidden="true">→</span></a>
+    </nav>
+  </div>
+</header>

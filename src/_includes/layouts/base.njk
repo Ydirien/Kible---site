@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ description or site.description }}">
+    <meta name="theme-color" content="#0b1f3a">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script defer src="/assets/js/main.js"></script>
+    <title>{{ title }} | {{ site.name }}</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }} | {{ site.name }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:locale" content="{{ site.locale }}">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Kible","url":"{{ site.url }}","description":"{{ site.description }}","sameAs":[]}</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+    {% include "partials/header.njk" %}
+    <main id="contenu">{{ content | safe }}</main>
+    {% include "partials/footer.njk" %}
+  </body>
+</html>

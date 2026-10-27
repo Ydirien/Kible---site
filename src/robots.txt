@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kible.fr/sitemap.xml
