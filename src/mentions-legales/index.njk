@@ -1,6 +1,34 @@
 ---
-layout: layouts/base.njk
-title: Mentions légales
-description: Mentions légales du site Kible.
+title: "Mentions légales | Kible"
+description: "Mentions légales du site kible.fr : éditeur, directeur de la publication, hébergeur, propriété intellectuelle et données personnelles."
 ---
-<section class="legal-page"><div class="container narrow prose"><p class="eyebrow">Informations légales</p><h1>Mentions légales</h1><div class="notice"><b>À compléter avant publication.</b> Les informations d'identification de l'éditeur et de l'hébergeur n'ont pas été fournies. Ces mentions doivent être validées puis complétées par Kible.</div><h2>Éditeur du site</h2><p>Raison sociale, forme juridique, capital social, adresse du siège, numéro RCS/SIREN, TVA intracommunautaire, e-mail et téléphone : <strong>à compléter et valider par Kible.</strong></p><h2>Directeur de la publication</h2><p>Nom et qualité : <strong>à compléter et valider par Kible.</strong></p><h2>Hébergement</h2><p>Nom, coordonnées et contact de l'hébergeur : <strong>à compléter et valider par Kible.</strong></p><h2>Propriété intellectuelle</h2><p>Les contenus de ce site sont protégés par le droit de la propriété intellectuelle. Toute reproduction non autorisée est interdite, sous réserve des exceptions prévues par la loi.</p><h2>Contact</h2><p>Pour toute question, utilisez le <a href="/contact/">formulaire de contact</a>.</p></div></section>
+{# NOTE INTERNE : texte structurel, non validé juridiquement. Une relecture par un juriste est nécessaire avant publication. Tous les champs [À COMPLÉTER] doivent être renseignés avec les informations officielles (Kbis). #}
+<section class="section legal">
+  <div class="container legal__inner prose">
+    <h1 class="page-title">Mentions légales</h1>
+    <p>Conformément à la loi du 21 juin 2004 pour la confiance dans l’économie numérique, nous vous informons de l’identité des différents intervenants du site kible.fr.</p>
+
+    <h2>Éditeur du site</h2>
+    <p>{{ site.legalName }} – [À COMPLÉTER : forme juridique, capital social, SIREN/SIRET, RCS et ville, numéro de TVA intracommunautaire]</p>
+    <p>Adresse&nbsp;: {{ site.address }}<br>E-mail&nbsp;: {{ site.email }}<br>Téléphone&nbsp;: {{ site.phone }}</p>
+
+    <h2>Directeur de la publication</h2>
+    <p>[À COMPLÉTER : nom et qualité du directeur de la publication]</p>
+
+    <h2>Hébergeur</h2>
+    <p>Le site est hébergé par Netlify, Inc. – [À COMPLÉTER : adresse postale à vérifier sur le site de l’hébergeur]. Site web&nbsp;: netlify.com.</p>
+
+    <h2>Propriété intellectuelle</h2>
+    <p>L’ensemble des contenus du site (textes, visuels, logos, marque Kible, éléments graphiques et code) est protégé par le droit de la propriété intellectuelle. Toute reproduction, représentation ou adaptation, totale ou partielle, sans autorisation écrite préalable de l’éditeur est interdite.</p>
+    <p>Les illustrations de l’interface présentées sur ce site sont des maquettes à données fictives.</p>
+
+    <h2>Responsabilité</h2>
+    <p>L’éditeur s’efforce de fournir des informations exactes et à jour, sans pouvoir en garantir l’exhaustivité. Les liens vers des sites tiers n’engagent pas sa responsabilité quant à leur contenu.</p>
+
+    <h2>Données personnelles et cookies</h2>
+    <p>Le traitement de vos données personnelles est décrit dans notre <a href="/confidentialite/">politique de confidentialité</a>.</p>
+
+    <h2>Droit applicable</h2>
+    <p>Le présent site est soumis au droit français. [À COMPLÉTER : juridiction compétente, si souhaité]</p>
+  </div>
+</section>

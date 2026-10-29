@@ -1,0 +1,25 @@
+{# Ruban « plateforme » : 6 modules sur un ruban en demi-cercles alternés. Desktop : SVG décoratif ; la liste HTML (.chain__list) porte l'information. #}
+<div class="chain">
+  <svg class="chain__svg" viewBox="0 0 1040 300" aria-hidden="true" focusable="false">
+    
+    <path d="M20 150A80 80 0 0 0 180 150A80 80 0 0 1 340 150A80 80 0 0 0 500 150A80 80 0 0 1 660 150A80 80 0 0 0 820 150A80 80 0 0 1 980 150" fill="none" stroke="#C8D0C5" stroke-width="14" stroke-linecap="round"/>
+    {%- for m in modules %}
+    {%- set cx = 100 + loop.index0 * 160 %}
+    <g filter="url(#ks-sm)"><circle cx="{{ cx }}" cy="150" r="58" fill="#fff"/></g>
+    <circle cx="{{ cx }}" cy="150" r="40" fill="{{ m.color }}"/>
+    <g transform="translate({{ cx - 18 }} 132) scale(1.5)" fill="none" stroke="#3EE695" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">{{ icons[m.icon] | safe }}</g>
+    {%- set w = m.label | length * 12 + 34 %}
+    {%- set ly = 38 if loop.index0 % 2 == 0 else 230 %}
+    <rect x="{{ cx - w / 2 }}" y="{{ ly }}" width="{{ w }}" height="32" rx="6" fill="#fff" stroke="#10203A" stroke-width="1.5"/>
+    <text x="{{ cx }}" y="{{ ly + 21.5 }}" text-anchor="middle" class="chain__text">{{ m.label | upper }}</text>
+    {%- endfor %}
+    {%- for i in [0, 1, 2, 3, 4] %}
+    <circle cx="{{ 180 + i * 160 }}" cy="150" r="11" fill="#fff" stroke="#C8D0C5" stroke-width="3"/>
+    {%- endfor %}
+  </svg>
+  <ol class="chain__list">
+    {%- for m in modules %}
+    <li><span class="chain__dot" style="--c: {{ m.color }}">{% icon m.icon %}</span>{{ m.label }}</li>
+    {%- endfor %}
+  </ol>
+</div>

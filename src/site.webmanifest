@@ -1,0 +1,11 @@
+{
+  "name": "Kible",
+  "short_name": "Kible",
+  "icons": [
+    { "src": "/assets/img/brand/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/assets/img/brand/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#10203A",
+  "background_color": "#F3F5F1",
+  "display": "browser"
+}

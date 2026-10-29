@@ -1,6 +1,60 @@
 ---
-layout: layouts/base.njk
-title: Contactez l'équipe Kible
-description: Parlons de vos enjeux terrain et découvrez comment Kible peut accompagner vos équipes.
+title: "Contacter l’équipe Kible"
+description: "Une question sur Kible ou une demande particulière ? Écrivez-nous. Pour voir le produit en action, demandez une démo."
+bodyClass: page-contact
 ---
-<section class="contact-page"><div class="container contact-grid"><div class="contact-copy"><p class="eyebrow eyebrow-light">Parlons terrain</p><h1>Un projet en tête ?<br><em>Parlons-en.</em></h1><p>Nos équipes prennent le temps de comprendre vos enjeux et de vous montrer ce que Kible peut changer au quotidien.</p><div class="contact-detail"><span aria-hidden="true">✦</span><p><b>Une réponse personnalisée</b><br>Nous vous répondons dans les meilleurs délais.</p></div><div class="contact-detail"><span aria-hidden="true">◌</span><p><b>Une démo utile</b><br>Adaptée à votre contexte, sans discours préfabriqué.</p></div></div><form class="contact-form" action="#" method="post" data-contact-form novalidate><h2>Parlez-nous de vous</h2><p class="form-intro">Les champs marqués d'un astérisque sont obligatoires.</p><div class="form-row"><div><label for="first-name">Prénom <abbr title="obligatoire">*</abbr></label><input id="first-name" name="first_name" autocomplete="given-name" required></div><div><label for="last-name">Nom <abbr title="obligatoire">*</abbr></label><input id="last-name" name="last_name" autocomplete="family-name" required></div></div><label for="email">E-mail professionnel <abbr title="obligatoire">*</abbr></label><input id="email" type="email" name="email" autocomplete="email" required aria-describedby="email-help"><small id="email-help">Utilisé uniquement pour répondre à votre demande.</small><label for="company">Entreprise</label><input id="company" name="company" autocomplete="organization"><label for="message">Votre message <abbr title="obligatoire">*</abbr></label><textarea id="message" name="message" rows="4" required></textarea><label class="consent"><input type="checkbox" name="privacy" required><span>J'ai lu et j'accepte la <a href="/confidentialite/">politique de confidentialité</a>. <abbr title="obligatoire">*</abbr></span></label><button class="button button-accent" type="submit">Envoyer ma demande <span aria-hidden="true">→</span></button><p class="form-status" aria-live="polite"></p><p class="form-legal">Ce formulaire est prêt à être relié à votre traitement PHP cPanel. Aucun envoi ni stockage n'est effectué sur ce site statique.</p></form></div></section>
+{% from "partials/forms.njk" import field, select, textarea, consent %}
+{% from "partials/cta-band.njk" import ctaBand %}
+
+<section class="hero hero--center" aria-labelledby="hero-titre">
+  {% include "partials/topo.njk" %}
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="hero__kicker">Contact</p>
+      <h1 class="hero__title hero__title--xl" id="hero-titre">Ravis de vous voir ici&nbsp;!</h1>
+    </div>
+  </div>
+</section>
+
+<section class="contact" aria-label="Nous contacter">
+  <div class="container contact__grid">
+    <div class="contact__text">
+      <p>L’équipe Kible aime échanger avec les installateurs de bornes de recharge et de panneaux solaires. Une question sur le produit, une suggestion, une demande particulière&nbsp;? Écrivez-nous. Et pour voir Kible en action sur votre activité, demandez une <a href="/demo/">démo personnalisée</a>.</p>
+      <p>Déjà client et besoin d’aide dans l’application&nbsp;?</p>
+      <p><a class="btn btn--grad btn--sm" href="{{ site.appUrl }}">Se connecter à Kible</a></p>
+
+      <h2 class="contact__title">Vous préférez l’e-mail ou le téléphone&nbsp;?</h2>
+      <p class="contact__lines">
+        E-mail&nbsp;: {% if "COMPLÉTER" in site.email %}<span class="mono">{{ site.email }}</span>{% else %}<a class="mono" href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}<br>
+        Téléphone&nbsp;: {% if "COMPLÉTER" in site.phone %}<span class="mono">{{ site.phone }}</span>{% else %}<a class="mono" href="tel:{{ site.phone | replace(' ', '') }}">{{ site.phone }}</a>{% endif %}<br>
+        Adresse&nbsp;: {{ site.address }}
+      </p>
+      <p>Ou utilisez simplement le formulaire&nbsp;:</p>
+    </div>
+
+    <div class="contact__panel">
+      <h2 class="visually-hidden" id="form-contact-titre">Formulaire de contact</h2>
+      <p class="form__note">Les champs marqués d’un astérisque (*) sont obligatoires.</p>
+      <form class="form" aria-labelledby="form-contact-titre" name="contact" method="POST" action="/merci/" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="form__hp" hidden><label>Ne pas remplir si vous êtes humain&nbsp;: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form__grid">
+          {{ field("prenom", "Prénom", "text", "given-name", true) }}
+          {{ field("nom", "Nom", "text", "family-name", true) }}
+        </div>
+        <div class="form__grid">
+          {{ field("entreprise", "Entreprise", "text", "organization", true) }}
+          {{ field("telephone", "Téléphone", "tel", "tel", false, "", "tel") }}
+        </div>
+        {{ field("email", "E-mail professionnel", "email", "email", true) }}
+        {{ select("activite", "Votre activité", ["Installation de bornes IRVE", "Installation photovoltaïque", "IRVE et photovoltaïque", "Autre"], true) }}
+        {{ select("equipe", "Taille de l’équipe terrain", ["1 à 5 personnes", "6 à 15 personnes", "16 à 50 personnes", "Plus de 50 personnes"], false) }}
+        {{ textarea("message", "Votre message", true, "", 7) }}
+        {{ consent("consentement-contact") }}
+        <p class="form__actions form__actions--start"><button class="btn btn--grad" type="submit">Envoyer</button></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+{{ ctaBand("Voyez comment Kible fonctionne", "Prospection sur carte, suivi d’activité, objectifs et coaching : tout ce dont vos équipes terrain ont besoin, au même endroit.", "cta-final") }}

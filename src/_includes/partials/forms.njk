@@ -1,0 +1,35 @@
+{# Macros de champs accessibles. Import : {% from "partials/forms.njk" import field, select, consent %} #}
+{% macro field(id, label, type="text", autocomplete="", required=false, help="", inputmode="") %}
+<div class="field">
+  <label class="field__label" for="{{ id }}">{{ label }}{% if required %} <span class="field__req" aria-hidden="true">*</span>{% endif %}</label>
+  <input class="field__input" id="{{ id }}" name="{{ id }}" type="{{ type }}"{% if autocomplete %} autocomplete="{{ autocomplete }}"{% endif %}{% if inputmode %} inputmode="{{ inputmode }}"{% endif %}{% if required %} required{% endif %}{% if help %} aria-describedby="{{ id }}-aide"{% endif %}>
+  {% if help %}<p class="field__help" id="{{ id }}-aide">{{ help }}</p>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro select(id, label, options, required=false, help="") %}
+<div class="field">
+  <label class="field__label" for="{{ id }}">{{ label }}{% if required %} <span class="field__req" aria-hidden="true">*</span>{% endif %}</label>
+  <select class="field__input field__select" id="{{ id }}" name="{{ id }}"{% if required %} required{% endif %}{% if help %} aria-describedby="{{ id }}-aide"{% endif %}>
+    <option value="">Sélectionner…</option>
+    {%- for o in options %}<option value="{{ o }}">{{ o }}</option>{% endfor %}
+  </select>
+  {% if help %}<p class="field__help" id="{{ id }}-aide">{{ help }}</p>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro textarea(id, label, required=false, help="", rows=5) %}
+<div class="field">
+  <label class="field__label" for="{{ id }}">{{ label }}{% if required %} <span class="field__req" aria-hidden="true">*</span>{% endif %}</label>
+  <textarea class="field__input field__textarea" id="{{ id }}" name="{{ id }}" rows="{{ rows }}"{% if required %} required{% endif %}{% if help %} aria-describedby="{{ id }}-aide"{% endif %}></textarea>
+  {% if help %}<p class="field__help" id="{{ id }}-aide">{{ help }}</p>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro consent(id) %}
+<div class="field field--check">
+  <input class="field__checkbox" type="checkbox" id="{{ id }}" name="consentement" value="oui" required aria-describedby="{{ id }}-aide">
+  <label class="field__label field__label--check" for="{{ id }}">J’accepte que Kible utilise mes données pour traiter ma demande. <span class="field__req" aria-hidden="true">*</span></label>
+  <p class="field__help" id="{{ id }}-aide">Pour en savoir plus et exercer vos droits, consultez notre <a href="/confidentialite/">politique de confidentialité</a>.</p>
+</div>
+{% endmacro %}

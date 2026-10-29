@@ -1,0 +1,38 @@
+{# Composition du hero : mobile sombre avec carte et modules, orbite, avatars et carte flottante. Illustration, données fictives. #}
+<div class="orbit-scene" role="img" aria-label="Illustration de l’application mobile Kible : carte de prospection, tournée, activité, objectifs, équipe et coaching (données fictives)">
+  <div class="orbit-scene__inner" aria-hidden="true">
+    <div class="orbit-scene__map"></div>
+    <span class="orbit-scene__orbit"></span>
+    <div class="dphone">
+      <div class="dphone__screen">
+        <svg class="dphone__map" viewBox="0 0 240 480" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <rect width="240" height="480" fill="#0D1828"/>
+          <g stroke="#24324A" stroke-width="7" fill="none" stroke-linecap="round"><path d="M-10 90 250 60M-10 210 250 230M-10 350 250 330M60 -10 40 490M170 -10 190 490"/></g>
+          <g stroke="#24324A" stroke-width="3" fill="none"><path d="M-10 150 250 140M-10 280 250 290M-10 420 250 400M115 -10 110 490"/></g>
+          <path d="M-10 470C60 420 90 300 140 250S220 120 250 90" stroke="#24324A" stroke-width="12" fill="none"/>
+        </svg>
+        <div class="dphone__status"><span>9:41</span><span class="dphone__island"></span><span class="dphone__bat"></span></div>
+        <p class="dphone__brand"><img class="dphone__logo" src="/assets/img/brand/kible-symbole-fond-sombre.svg" alt="" width="28" height="28">kible</p>
+        <div class="dphone__grid">
+          <span class="tile tile--teal">{% icon "map" %}<small>Carte</small></span>
+          <span class="tile tile--orange">{% icon "route" %}<small>Tournée</small></span>
+          <span class="tile tile--blue">{% icon "chart" %}<small>Activité</small></span>
+          <span class="tile tile--orange">{% icon "target" %}<small>Objectifs</small></span>
+          <span class="tile tile--blue">{% icon "users" %}<small>Équipe</small></span>
+          <span class="tile tile--teal">{% icon "trophy" %}<small>Coaching</small></span>
+        </div>
+      </div>
+    </div>
+    <span class="bubble bubble--a">{% icon "user" %}</span>
+    <span class="bubble bubble--b">{% icon "user" %}</span>
+    <span class="bubble bubble--c">{% icon "user" %}</span>
+    <span class="mpin mpin--a">{% icon "pin" %}</span>
+    <span class="mpin mpin--b">{% icon "pin" %}</span>
+    <div class="lcard">
+      <span><i class="av av--orange">{% icon "user" %}</i><b style="--w:78%"></b></span>
+      <span><i class="av av--teal">{% icon "user" %}</i><b style="--w:64%"></b></span>
+      <span><i class="av av--slate">{% icon "user" %}</i><b style="--w:48%"></b></span>
+      <span><i class="av av--navy">{% icon "user" %}</i><b style="--w:86%"></b></span>
+    </div>
+  </div>
+</div>

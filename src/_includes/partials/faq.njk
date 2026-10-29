@@ -1,0 +1,20 @@
+{# Utilise faq[faqKey] (front matter faqKey) : même source que le JSON-LD FAQPage. #}
+{% if faq[faqKey] %}
+<section class="section faq{% if faqCenter %} faq--center{% endif %}" aria-labelledby="faq-titre">
+  <div class="container faq__inner">
+    <div class="faq__intro">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section__title" id="faq-titre">{{ faqTitle or "Questions fréquentes" }}</h2>
+      <p class="section__lead">Une autre question&nbsp;? <a href="/contact/">Écrivez-nous</a> ou <a href="/demo/">demandez une démo</a>, nous y répondrons de vive voix.</p>
+    </div>
+    <div class="faq__list">
+      {%- for item in faq[faqKey] %}
+      <details class="faq__item"{% if loop.first %} open{% endif %}>
+        <summary class="faq__question">{{ item.q }}</summary>
+        <div class="faq__answer"><p>{{ item.a }}</p></div>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,17 @@
+{# Tableau de bord d'activité (décoratif, données fictives). Parent : role="img" + aria-label. #}
+<div class="panel" aria-hidden="true">
+  <div class="panel__head"><b>Activité de l’équipe</b><span class="panel__pill">Ce mois-ci</span></div>
+  <div class="panel__kpis">
+    <div class="kpi"><small>Visites</small><b>412</b><span class="kpi__trend">{% icon "trend" %}+9&nbsp;%</span></div>
+    <div class="kpi"><small>Opportunités</small><b>57</b><span class="kpi__trend">{% icon "trend" %}+6</span></div>
+    <div class="kpi"><small>Rendez-vous</small><b>86</b><span class="kpi__trend">{% icon "trend" %}+11</span></div>
+  </div>
+  <div class="chart">
+    <div class="chart__head"><small>Visites par semaine</small><span><i class="lg lg--navy"></i>Réalisé <i class="lg lg--line"></i>Objectif</span></div>
+    <div class="chart__bars">
+      <i style="--h:46%"></i><i style="--h:58%"></i><i style="--h:52%"></i><i style="--h:70%"></i><i style="--h:64%"></i><i style="--h:82%"></i><i style="--h:76%"></i><i class="is-now" style="--h:90%"></i>
+      <span class="chart__goal" style="--g:72%"></span>
+    </div>
+  </div>
+  <div class="panel__goal"><small>Objectif mensuel de l’équipe</small><b>72&nbsp;%</b><div class="bar"><i style="--p:72%"></i></div></div>
+</div>

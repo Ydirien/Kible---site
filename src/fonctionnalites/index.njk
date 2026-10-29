@@ -1,10 +1,166 @@
 ---
-layout: layouts/base.njk
-title: Fonctionnalités pour les équipes terrain
-description: Découvrez les fonctionnalités Kible : pilotage, suivi d'activité et coaching pour rendre chaque action terrain plus efficace.
+title: "Fonctionnalités Kible : carte, suivi et coaching terrain"
+description: "Carte de prospection, tableaux de bord d’activité et coaching : les trois fonctionnalités de Kible pour les équipes terrain des installateurs."
+schema: [software]
+bodyClass: page-features
+scripts: [timeline.js]
 ---
-<section class="page-hero"><div class="container narrow center"><p class="eyebrow">La plateforme Kible</p><h1>Tout ce dont votre terrain a besoin.<br><em>Rien de superflu.</em></h1><p class="lead">Un espace partagé, intuitif et puissant pour passer de l'intention à l'action.</p></div></section>
-<section id="pilotage" class="section product-row"><div class="container product-grid"><div class="product-copy"><p class="eyebrow">01 — Piloter</p><h2>Les bonnes priorités, au bon endroit.</h2><p>Transformez votre stratégie en journées de terrain concrètes. Kible aide chaque commercial à organiser son secteur et à se concentrer sur ce qui compte.</p><ul class="check-list"><li>Planification par zone et potentiel</li><li>Fiches prospects toujours à jour</li><li>Parcours optimisés sur mobile</li></ul></div><div class="product-art map-art" aria-label="Illustration d'une carte de secteurs"><span class="map-line one"></span><span class="map-line two"></span><span class="pin pin-one"></span><span class="pin pin-two"></span><span class="pin pin-three"></span><div class="map-label">12 opportunités<br><b>à proximité</b></div></div></div></section>
-<section id="suivi" class="section product-row alternate"><div class="container product-grid reverse"><div class="product-copy"><p class="eyebrow">02 — Mesurer</p><h2>Une vision nette de l'activité.</h2><p>Suivez les indicateurs qui font vraiment avancer vos équipes. En temps réel, sans tableaux à reconstruire ni relances inutiles.</p><ul class="check-list"><li>Tableaux de bord personnalisés</li><li>Objectifs individuels et collectifs</li><li>Rapports simples à partager</li></ul></div><div class="product-art chart-art" aria-label="Illustration d'un graphique de performance"><div class="chart-card"><div><b>Performance équipe</b><small>30 derniers jours</small></div><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>+18,4% <small>vs. période précédente</small></strong></div></div></div></section>
-<section id="coaching" class="section product-row"><div class="container product-grid"><div class="product-copy"><p class="eyebrow">03 — Faire grandir</p><h2>Un coaching plus juste, plus humain.</h2><p>Repérez les signaux, partagez les bonnes pratiques et transformez les données en conversations utiles avec chaque collaborateur.</p><ul class="check-list"><li>Suivi individuel en continu</li><li>Moments forts à célébrer</li><li>Plans de progrès partagés</li></ul></div><div class="product-art coach-art" aria-label="Illustration de coaching"><div class="coach-bubble">Belle semaine, Lucas !<br><b>Tu es à 92% de ton objectif.</b></div><div class="coach-person">L</div><div class="coach-progress"><span>Objectif mensuel</span><b>92%</b><i><em></em></i></div></div></div></section>
-<section class="cta-section compact"><div class="container"><h2>Un outil simple. Un impact durable.</h2><a class="button button-accent" href="{{ site.appUrl }}">Essayer Kible <span aria-hidden="true">→</span></a></div></section>
+{% from "partials/cta-band.njk" import ctaBand %}
+{% include "illus/defs.njk" %}
+
+<section class="hero hero--solution" aria-labelledby="hero-titre">
+  {% include "partials/topo.njk" %}
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="hero__kicker">Fonctionnalités</p>
+      <h1 class="hero__title hero__title--xl" id="hero-titre">Trois fonctionnalités pour garder le cap sur le terrain</h1>
+      <p class="hero__lead">Prospecter avec méthode, mesurer l’activité, faire progresser les équipes&nbsp;: Kible réunit l’essentiel pour les installateurs de bornes de recharge et de panneaux solaires, dans une seule application.</p>
+      <p class="hero__actions">
+        <a class="btn btn--grad" href="/demo/">Demander une démo</a>
+        <a class="btn btn--secondary" href="https://app.kible.fr">Essayer Kible</a>
+      </p>
+    </div>
+    <div class="hero__visual hero__visual--ill hero__visual--card" role="img" aria-label="Illustration : l’application Kible avec une carte de prospection, un graphique d’activité et le suivi de deux commerciaux">{% include "illus/plateforme.njk" %}</div>
+  </div>
+</section>
+
+<section class="modules modules--nav" aria-labelledby="modules-titre">
+  <div class="container modules__inner">
+    <p class="modules__kicker">La plateforme</p>
+    <h2 class="modules__title" id="modules-titre">Six modules, trois promesses</h2>
+    <p class="modules__text"><strong>Prioriser</strong> avec les secteurs et les tournées, <strong>mesurer</strong> avec l’activité et les objectifs, <strong>faire progresser</strong> avec le classement et le coaching. Choisissez un module pour en savoir plus.</p>
+    {% include "partials/modules-list.njk" %}
+  </div>
+</section>
+
+<section class="features-tl features-tl--page" aria-label="Le détail des fonctionnalités">
+  <div class="container">
+    <div class="timeline">
+      <div class="timeline__track" aria-hidden="true"><span class="timeline__fill"></span><span class="timeline__badge"><img src="/assets/img/brand/kible-symbole.svg" alt="" width="30" height="30"></span></div>
+      <ol class="timeline__list">
+
+        <li class="tl-item tl-item--rev" id="prospection">
+          <div class="tl-item__text">
+            <p class="tl-item__kicker">Prospection terrain · Secteurs</p>
+            <h2 class="tl-item__title">Des secteurs clairs, attribués à chacun</h2>
+            <p>Fini les tournées improvisées. Vos prospects apparaissent sur une carte, vos secteurs sont répartis, et chaque commercial sait où aller.</p>
+            <ul class="checks"><li>{% icon "check" %}Découpez votre territoire en secteurs et en zones</li><li>{% icon "check" %}Attribuez chaque secteur à un commercial, pour éviter les doublons</li><li>{% icon "check" %}Repérez d’un coup d’œil les prospects géolocalisés à visiter</li></ul>
+          </div>
+          <div class="tl-item__visual" role="img" aria-label="Illustration : une tablette affiche une carte découpée en secteurs de couleur, avec un commercial attribué">{% include "illus/secteurs.njk" %}</div>
+        </li>
+
+        <li class="tl-item" id="tournees">
+          <div class="tl-item__text">
+            <p class="tl-item__kicker">Prospection terrain · Tournées</p>
+            <h2 class="tl-item__title">Des tournées de porte-à-porte cohérentes</h2>
+            <p>Préparez des parcours qui ont du sens sur le terrain et passez plus de temps à convaincre qu’à conduire.</p>
+            <ul class="checks"><li>{% icon "check" %}Des tournées construites à partir de la carte</li><li>{% icon "check" %}Plus de chevauchement entre commerciaux</li><li>{% icon "check" %}Chaque commercial sait où aller et dans quel ordre</li></ul>
+          </div>
+          <div class="tl-item__visual" role="img" aria-label="Illustration : un téléphone affiche une tournée de porte-à-porte sur une carte">{% include "illus/tournees.njk" %}</div>
+        </li>
+
+        <li class="tl-item tl-item--rev" id="suivi">
+          <div class="tl-item__text">
+            <p class="tl-item__kicker">Suivi d’activité · Tableaux de bord</p>
+            <h2 class="tl-item__title">L’activité terrain, visible sans compte rendu</h2>
+            <p>Dirigeants et managers voient enfin ce qui se passe sur le terrain, sans courir après les comptes rendus.</p>
+            <ul class="checks"><li>{% icon "check" %}Visites&nbsp;: combien de portes ont été frappées, et par qui</li><li>{% icon "check" %}Opportunités&nbsp;: celles qui avancent et celles qui stagnent</li><li>{% icon "check" %}Une vue par commercial et pour toute l’équipe</li></ul>
+          </div>
+          <div class="tl-item__visual" role="img" aria-label="Illustration : un tableau de bord d’activité avec indicateurs, courbe d’évolution et comparaison entre commerciaux">{% include "illus/activite.njk" %}</div>
+        </li>
+
+        <li class="tl-item" id="objectifs">
+          <div class="tl-item__text">
+            <p class="tl-item__kicker">Suivi d’activité · Objectifs</p>
+            <h2 class="tl-item__title">Des objectifs suivis en continu</h2>
+            <p>Comparez le réel aux objectifs de l’équipe et de chaque commercial, et ajustez à temps plutôt qu’en fin de mois.</p>
+            <ul class="checks"><li>{% icon "check" %}Objectifs d’équipe et objectifs individuels</li><li>{% icon "check" %}Un suivi en continu, sans attendre la fin du mois</li><li>{% icon "check" %}Repérez tôt qui a besoin d’un coup de pouce</li></ul>
+          </div>
+          <div class="tl-item__visual" role="img" aria-label="Illustration : une jauge d’objectif mensuel et la progression de trois commerciaux">{% include "illus/objectifs.njk" %}</div>
+        </li>
+
+        <li class="tl-item tl-item--rev" id="classement">
+          <div class="tl-item__text">
+            <p class="tl-item__kicker">Coaching · Classement</p>
+            <h2 class="tl-item__title">Une émulation qui donne envie de repartir sur le terrain</h2>
+            <p>Un commercial qui voit sa progression reste engagé. Le classement d’équipe entretient une émulation saine, semaine après semaine.</p>
+            <ul class="checks"><li>{% icon "check" %}Un classement d’équipe partagé</li><li>{% icon "check" %}Des progrès visibles pour chacun</li><li>{% icon "check" %}Des réussites à valoriser</li></ul>
+          </div>
+          <div class="tl-item__visual" role="img" aria-label="Illustration : un classement d’équipe, un podium et un message de coaching">{% include "illus/coaching.njk" %}</div>
+        </li>
+
+        <li class="tl-item" id="coaching">
+          <div class="tl-item__text">
+            <p class="tl-item__kicker">Coaching · Suivi individuel</p>
+            <h2 class="tl-item__title">Un coaching appuyé sur des faits</h2>
+            <p>Un manager qui dispose de repères factuels coache mieux. Identifiez les points forts et les axes de progrès de chacun, et fixez des caps partagés.</p>
+            <ul class="checks"><li>{% icon "check" %}Des repères factuels pour vos points de coaching</li><li>{% icon "check" %}Des objectifs individuels clairs, atteignables et partagés</li><li>{% icon "check" %}Les axes de progrès de chacun, identifiés</li></ul>
+          </div>
+          <div class="tl-item__visual" role="img" aria-label="Illustration : la progression d’un commercial, un échange de coaching avec son manager et ses objectifs de la semaine">{% include "illus/coaching-1to1.njk" %}</div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band band--center" aria-labelledby="band-titre">
+  <div class="container band__center">
+    <h2 class="band__title" id="band-titre">Découvrez Kible en conditions réelles</h2>
+    <p class="band__text">Une démo suffit pour voir comment Kible s’adapte à vos secteurs, à vos équipes et à votre métier, que vous installiez des bornes de recharge, des panneaux solaires, ou les deux.</p>
+    <p class="band__actions"><a class="btn btn--grad btn--sm" href="/demo/">Demander une démo</a></p>
+  </div>
+</section>
+
+<section class="duo" aria-labelledby="duo-titre">
+  <div class="container">
+    <div class="duo__head">
+      <p class="modules__kicker">Pour qui&nbsp;?</p>
+      <h2 class="duo__title" id="duo-titre">Une plateforme, deux façons de gagner du terrain</h2>
+    </div>
+    <div class="duo__grid">
+      <article class="duo__card">
+        <span class="duo__icon">{% icon "compass" %}</span>
+        <h3 class="duo__card-title">Pour les dirigeants et managers</h3>
+        <p>Gardez le cap sur l’activité commerciale terrain&nbsp;: où l’on prospecte, combien de visites sont réalisées, quelles opportunités avancent, quels objectifs sont atteints. Vous décidez sur des faits, pas sur des impressions.</p>
+        <ul class="checks"><li>{% icon "check" %}Activité de chaque commercial et de l’équipe</li><li>{% icon "check" %}Opportunités et objectifs suivis en continu</li><li>{% icon "check" %}Des points de coaching appuyés sur des repères</li></ul>
+      </article>
+      <article class="duo__card">
+        <span class="duo__icon">{% icon "pin" %}</span>
+        <h3 class="duo__card-title">Pour les équipes terrain</h3>
+        <p>Sachez où aller, qui voir et dans quel ordre. Vos tournées de porte-à-porte sont préparées, vos rendez-vous suivis, et vous voyez enfin votre progression.</p>
+        <ul class="checks"><li>{% icon "check" %}Un secteur et une tournée préparés</li><li>{% icon "check" %}Visites et rendez-vous suivis au même endroit</li><li>{% icon "check" %}Une progression visible, semaine après semaine</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="posts" aria-labelledby="posts-titre">
+  <div class="container">
+    <div class="posts__head">
+      <h2 class="posts__title" id="posts-titre">Kible pour votre métier</h2>
+      <a class="link-arrow" href="/tarifs/">Voir les tarifs{% icon "arrow" %}</a>
+    </div>
+    <ul class="posts__grid">
+      <li class="post">
+        <div class="post__img">{% include "illus/irve.njk" %}</div>
+        <h3 class="post__title"><a href="/solutions/installateurs-irve/">Installateurs de bornes de recharge IRVE</a></h3>
+        <p class="post__text">Wallbox chez un particulier, bornes en copropriété, recharge pour une flotte d’entreprise&nbsp;: repérez, visitez et suivez chaque opportunité.</p>
+        <p class="post__cta" aria-hidden="true"><span class="btn btn--grad btn--xs">Découvrir</span></p>
+      </li>
+      <li class="post">
+        <div class="post__img">{% include "illus/pv.njk" %}</div>
+        <h3 class="post__title"><a href="/solutions/installateurs-photovoltaiques/">Installateurs photovoltaïques</a></h3>
+        <p class="post__text">Toitures de maisons, bâtiments d’entreprise, ombrières de parking&nbsp;: ciblez les bons secteurs et enchaînez les rendez-vous.</p>
+        <p class="post__cta" aria-hidden="true"><span class="btn btn--grad btn--xs">Découvrir</span></p>
+      </li>
+      <li class="post">
+        <div class="post__img">{% include "illus/tarifs.njk" %}</div>
+        <h3 class="post__title"><a href="/tarifs/">Des offres adaptées à votre équipe</a></h3>
+        <p class="post__text">Quelques commerciaux ou une équipe terrain plus large&nbsp;: trouvez l’offre qui correspond à votre organisation.</p>
+        <p class="post__cta" aria-hidden="true"><span class="btn btn--grad btn--xs">Découvrir</span></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{{ ctaBand("Voyez Kible appliqué à votre activité", "Demandez une démo et découvrez les six modules sur des situations d’installateurs IRVE ou photovoltaïques.", "cta-final") }}

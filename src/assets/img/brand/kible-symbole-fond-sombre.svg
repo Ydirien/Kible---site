@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 224 224" width="224" height="224" role="img" aria-label="Kible">
+  <defs>
+    <clipPath id="k-clip"><rect x="0" y="40" width="200" height="120"/></clipPath>
+    <clipPath id="k-gap-clip"><rect x="0" y="31" width="200" height="138"/></clipPath>
+    <mask id="k-mask" maskUnits="userSpaceOnUse" x="-12" y="-12" width="224" height="224">
+      <rect x="-12" y="-12" width="224" height="224" fill="#fff"/>
+      <g clip-path="url(#k-gap-clip)" stroke="#000" stroke-width="28" fill="none">
+        <line x1="68" y1="20" x2="68" y2="180"/>
+        <polyline points="148,20 68,100 148,180" stroke-linejoin="bevel"/>
+      </g>
+    </mask>
+  </defs>
+  <g mask="url(#k-mask)" fill="none" stroke="#E9EEE6" stroke-width="8">
+    <circle cx="100" cy="100" r="86"/><circle cx="100" cy="100" r="64"/><circle cx="100" cy="100" r="42"/>
+  </g>
+  <g stroke="#E9EEE6" stroke-width="5" stroke-linecap="round">
+    <line x1="100" y1="-6" x2="100" y2="6"/><line x1="100" y1="194" x2="100" y2="206"/>
+    <line x1="-6" y1="100" x2="6" y2="100"/><line x1="194" y1="100" x2="206" y2="100"/>
+  </g>
+  <g clip-path="url(#k-clip)" stroke="#3EE695" stroke-width="14" fill="none">
+    <line x1="68" y1="30" x2="68" y2="170"/>
+    <polyline points="138,30 68,100 138,170" stroke-linejoin="bevel"/>
+  </g>
+  <circle cx="100" cy="100" r="10" fill="#3EE695"/>
+</svg>

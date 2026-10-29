@@ -1,0 +1,6 @@
+{# Rangée des 6 modules, chacun relié à sa section de la page Fonctionnalités. #}
+<ul class="modules__list">
+  {%- for m in modules %}
+  <li><a class="modules__link" href="/fonctionnalites/#{{ m.anchor }}"><span class="modules__dot" style="--c: {{ m.color }}">{% icon m.icon %}</span>{{ m.label }}</a></li>
+  {%- endfor %}
+</ul>

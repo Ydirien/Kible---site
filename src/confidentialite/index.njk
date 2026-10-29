@@ -1,6 +1,43 @@
 ---
-layout: layouts/base.njk
-title: Politique de confidentialité
-description: Informations relatives au traitement de vos données personnelles par Kible.
+title: "Politique de confidentialité | Kible"
+description: "Comment Kible collecte, utilise et protège les données personnelles recueillies via les formulaires du site kible.fr, et comment exercer vos droits."
 ---
-<section class="legal-page"><div class="container narrow prose"><p class="eyebrow">Vos données</p><h1>Politique de confidentialité</h1><div class="notice"><b>À valider avant publication.</b> Cette page décrit le cadre prévu pour le site vitrine. Kible doit confirmer l'identité du responsable de traitement, les coordonnées de contact et la durée exacte de conservation.</div><h2>Notre approche</h2><p>Ce site est conçu pour limiter la collecte de données. Aucun cookie non essentiel ni traceur publicitaire n'est déposé par le site dans sa version actuelle.</p><h2>Données collectées via le formulaire</h2><p>Lorsque le formulaire de contact sera relié à un traitement PHP, les données demandées seront : prénom, nom, e-mail professionnel, entreprise et message. Elles sont nécessaires uniquement pour répondre à votre demande.</p><h2>Base légale et destinataires</h2><p>Le traitement repose sur votre consentement, exprimé par la case à cocher du formulaire. Les données seront accessibles uniquement aux personnes habilitées de Kible chargées de traiter les demandes.</p><h2>Durée de conservation</h2><p><strong>À définir et valider par Kible</strong> selon la finalité de la demande et les obligations applicables. Cette durée devra être indiquée avant la mise en service du formulaire.</p><h2>Vos droits</h2><p>Vous pouvez demander l'accès, la rectification, l'effacement, la limitation ou l'opposition au traitement de vos données, ainsi que la portabilité lorsque celle-ci s'applique. Les coordonnées pour exercer ces droits et celles du DPO, s'il existe, sont <strong>à compléter par Kible</strong>. Vous pouvez également introduire une réclamation auprès de la CNIL.</p><h2>Cookies</h2><p>Le site n'utilise aucun cookie non essentiel. Si des outils de mesure d'audience ou des services tiers sont ajoutés ultérieurement, leur activation devra respecter les obligations d'information et de consentement applicables.</p></div></section>
+{# NOTE INTERNE : texte structurel, non validé juridiquement. Une relecture par un juriste (RGPD) est nécessaire avant publication. Vérifier notamment les durées de conservation, les transferts hors UE (Netlify, Inc. est établie aux États-Unis) et l'absence réelle de cookies/traceurs. #}
+<section class="section legal">
+  <div class="container legal__inner prose">
+    <h1 class="page-title">Politique de confidentialité</h1>
+    <p>Cette page explique quelles données personnelles sont recueillies sur kible.fr, pourquoi, et quels sont vos droits.</p>
+
+    <h2>Responsable du traitement</h2>
+    <p>{{ site.legalName }} – {{ site.address }} – {{ site.email }}</p>
+    <p>Contact pour les questions relatives aux données personnelles (DPO le cas échéant)&nbsp;: [À COMPLÉTER : e-mail dédié ou nom du DPO]</p>
+
+    <h2>Données collectées</h2>
+    <p>Via le formulaire de demande de démo&nbsp;: prénom, nom, e-mail professionnel, téléphone (facultatif), entreprise, activité, taille de l’équipe terrain (facultative) et message (facultatif).</p>
+    <p>Via le formulaire de contact&nbsp;: nom et prénom, e-mail et contenu de votre message.</p>
+    <p>[À COMPLÉTER : vérifier que la liste correspond aux champs réellement présents dans les formulaires]</p>
+
+    <h2>Finalités et bases légales</h2>
+    <ul>
+      <li>Traiter votre demande de démonstration et vous recontacter&nbsp;: mesures précontractuelles prises à votre demande, et consentement que vous exprimez en cochant la case dédiée.</li>
+      <li>Répondre à votre message de contact&nbsp;: consentement et intérêt légitime à répondre aux sollicitations reçues.</li>
+    </ul>
+    <p>[À COMPLÉTER : confirmer les bases légales avec un juriste, et indiquer si les données servent à d’autres finalités, par exemple de la prospection commerciale]</p>
+
+    <h2>Durée de conservation</h2>
+    <p>[À COMPLÉTER : durée de conservation des demandes de démo et de contact, par exemple à compter du dernier échange]</p>
+
+    <h2>Destinataires et sous-traitants</h2>
+    <p>Vos données sont destinées aux équipes de Kible en charge des demandes. Les formulaires du site sont traités via la fonction Netlify Forms, fournie par Netlify, Inc., qui héberge également le site. [À COMPLÉTER : autres sous-traitants éventuels (messagerie, outil de gestion des demandes), localisation des données et garanties applicables en cas de transfert hors Union européenne]</p>
+
+    <h2>Vos droits</h2>
+    <p>Vous disposez d’un droit d’accès, de rectification, d’effacement, d’opposition, de limitation et de portabilité de vos données, ainsi que du droit de retirer votre consentement à tout moment et de définir des directives sur le sort de vos données après votre décès.</p>
+    <p>Pour exercer vos droits, écrivez à&nbsp;: [À COMPLÉTER : e-mail ou adresse postale]. Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la CNIL (cnil.fr).</p>
+
+    <h2>Cookies et traceurs</h2>
+    <p>[À COMPLÉTER : à confirmer avant publication] À notre connaissance, le site kible.fr ne dépose aucun cookie ni traceur nécessitant votre consentement (pas de mesure d’audience ni de publicité). Si cela devait évoluer, cette page serait mise à jour et un dispositif de recueil du consentement serait mis en place.</p>
+
+    <h2>Mise à jour</h2>
+    <p>Dernière mise à jour&nbsp;: [À COMPLÉTER : date]</p>
+  </div>
+</section>

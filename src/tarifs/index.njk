@@ -1,8 +1,56 @@
 ---
-layout: layouts/base.njk
-title: Tarifs simples et transparents
-description: Choisissez l'offre Kible adaptée à votre équipe terrain. Une tarification claire et évolutive.
+title: "Tarifs Kible : offres pour équipes terrain"
+description: "Découvrez comment Kible se tarife pour les installateurs IRVE et photovoltaïques, et demandez une démo pour choisir l’offre adaptée à votre équipe."
+schema: [software]
+faqKey: tarifs
 ---
-<section class="page-hero pricing-hero"><div class="container narrow center"><p class="eyebrow">Tarifs</p><h1>Investissez dans l'élan<br>de votre équipe.</h1><p class="lead">Une offre claire, qui évolue avec vous. Sans surprise, sans engagement.</p></div></section>
-<section class="pricing-section"><div class="container pricing-grid"><article class="price-card"><p class="plan-label">Essentiel</p><h2>Pour démarrer<br>sereinement</h2><p class="price"><strong>Sur devis</strong><span>adapté à votre équipe</span></p><ul class="check-list"><li>Pilotage de l'activité terrain</li><li>Suivi des prospects et visites</li><li>Tableaux de bord essentiels</li><li>Support en ligne</li></ul><a class="button button-outline" href="/contact/">Parler à un expert</a></article><article class="price-card featured"><span class="popular">Le plus choisi</span><p class="plan-label">Performance</p><h2>Pour accélérer<br>collectivement</h2><p class="price"><strong>Sur devis</strong><span>adapté à votre organisation</span></p><ul class="check-list"><li>Tout Essentiel, et plus encore</li><li>Objectifs et coaching avancé</li><li>Rapports personnalisés</li><li>Accompagnement au déploiement</li></ul><a class="button button-accent" href="/contact/">Demander une démo <span aria-hidden="true">→</span></a></article><article class="price-card"><p class="plan-label">Entreprise</p><h2>Pour déployer<br>à grande échelle</h2><p class="price"><strong>Sur mesure</strong><span>pour vos enjeux spécifiques</span></p><ul class="check-list"><li>Tout Performance</li><li>Paramétrage sur mesure</li><li>Gestion multi-équipes</li><li>Accompagnement dédié</li></ul><a class="button button-outline" href="/contact/">Échanger avec nous</a></article></div><p class="pricing-note">Tous les plans incluent les mises à jour et l'hébergement sécurisé. Les modalités définitives sont précisées dans votre proposition commerciale.</p></section>
-<section class="section faq-section"><div class="container narrow"><p class="eyebrow center-text">Questions fréquentes</p><h2 class="center-text">Tout est plus clair quand on échange.</h2><details><summary>Y a-t-il un engagement de durée ?</summary><p>Les modalités d'engagement sont définies de manière transparente dans votre proposition, selon les besoins de votre organisation.</p></details><details><summary>Kible peut-il s'adapter à notre méthode de vente ?</summary><p>Oui. Nous configurons Kible avec vous pour qu'il s'intègre à vos processus et au quotidien de vos équipes.</p></details><details><summary>Comment se passe le déploiement ?</summary><p>Notre équipe vous accompagne dans la prise en main, le paramétrage et l'adoption par vos équipes.</p></details></div></section>
+{% from "partials/cta-band.njk" import ctaBand %}
+
+<section class="page-hero page-hero--center" aria-labelledby="page-titre">
+  <div class="container page-hero__inner">
+    <p class="eyebrow">Tarifs</p>
+    <h1 class="page-title" id="page-titre">Des tarifs adaptés à votre équipe</h1>
+    <p class="page-lead">Que vous encadriez quelques commerciaux ou une équipe terrain plus large, choisissez l’offre qui correspond à votre organisation. Une démo vous aide à trancher.</p>
+  </div>
+</section>
+
+<section class="section pricing" aria-labelledby="pricing-titre">
+  <div class="container">
+    <h2 class="visually-hidden" id="pricing-titre">Nos offres</h2>
+    <ul class="pricing__grid">
+      <li class="plan">
+        <h3 class="plan__name">[À COMPLÉTER : nom de l’offre 1]</h3>
+        <p class="plan__price"><span class="todo">[À COMPLÉTER : prix de l’offre 1]</span></p>
+        <ul class="plan__features"><li>{% icon "check" %}[À COMPLÉTER : contenu de l’offre 1]</li><li>{% icon "check" %}[À COMPLÉTER : limites de l’offre 1]</li></ul>
+        <p class="plan__cta"><a class="btn btn--secondary" href="/demo/">Demander une démo</a></p>
+      </li>
+      <li class="plan plan--featured">
+        <p class="plan__badge">Recommandée</p>
+        <h3 class="plan__name">[À COMPLÉTER : nom de l’offre 2, la recommandée]</h3>
+        <p class="plan__price"><span class="todo">[À COMPLÉTER : prix de l’offre 2]</span></p>
+        <ul class="plan__features"><li>{% icon "check" %}[À COMPLÉTER : contenu de l’offre 2]</li><li>{% icon "check" %}[À COMPLÉTER : limites de l’offre 2]</li></ul>
+        <p class="plan__cta"><a class="btn btn--primary" href="/demo/">Demander une démo</a></p>
+      </li>
+      <li class="plan">
+        <h3 class="plan__name">[À COMPLÉTER : nom de l’offre 3]</h3>
+        <p class="plan__price"><span class="todo">[À COMPLÉTER : prix de l’offre 3]</span></p>
+        <ul class="plan__features"><li>{% icon "check" %}[À COMPLÉTER : contenu de l’offre 3]</li><li>{% icon "check" %}[À COMPLÉTER : limites de l’offre 3]</li></ul>
+        <p class="plan__cta"><a class="btn btn--secondary" href="/demo/">Demander une démo</a></p>
+      </li>
+    </ul>
+    <p class="pricing__note"><span class="todo">[À COMPLÉTER : mentions tarifaires – HT ou TTC, engagement, essai éventuel]</span></p>
+    <div class="pricing__included">
+      <p class="pricing__included-title">Au cœur de Kible</p>
+      <ul>
+        <li>{% icon "map" %}Prospection terrain et carte</li>
+        <li>{% icon "chart" %}Suivi d’activité et tableaux de bord</li>
+        <li>{% icon "trophy" %}Coaching et progression</li>
+      </ul>
+      <p class="pricing__included-note"><span class="todo">[À COMPLÉTER : préciser quelles fonctionnalités sont incluses dans chaque offre]</span></p>
+    </div>
+  </div>
+</section>
+
+{% include "partials/faq.njk" %}
+
+{{ ctaBand("Trouvons l’offre qui convient à votre équipe", "Demandez une démo et faisons le point sur votre organisation terrain et vos besoins de pilotage.", "cta-final") }}

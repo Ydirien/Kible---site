@@ -1,0 +1,23 @@
+{# Usage : {% from "partials/cta-band.njk" import ctaBand %}{{ ctaBand("Titre", "Texte", "id") }} #}
+{% macro ctaBand(title, text, id="cta") %}
+<section class="cta-band" aria-labelledby="{{ id }}-titre">
+  <div class="container cta-band__inner">
+    <div class="cta-band__content">
+      <h2 class="cta-band__title" id="{{ id }}-titre">{{ title }}</h2>
+      {% if text %}<p class="cta-band__text">{{ text }}</p>{% endif %}
+      <p class="cta-band__actions">
+        <a class="btn btn--grad btn--lg" href="/demo/">Demander une démo</a>
+        <a class="btn btn--outline-light btn--lg" href="https://app.kible.fr">Essayer Kible</a>
+      </p>
+    </div>
+    <ul class="cta-band__list">
+      <li><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Centralisez vos prospects</li>
+      <li><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Découpez vos secteurs</li>
+      <li><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Organisez vos tournées</li>
+      <li><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Suivez l’activité</li>
+      <li><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Fixez des objectifs</li>
+      <li><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Coachez vos équipes</li>
+    </ul>
+  </div>
+</section>
+{% endmacro %}

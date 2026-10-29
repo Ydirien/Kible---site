@@ -1,13 +1,40 @@
 <header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="/" aria-label="Kible, accueil"><span class="brand-mark" aria-hidden="true">K</span>Kible</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Ouvrir le menu</span><span></span><span></span></button>
+  <div class="container site-header__inner">
+    <a class="brand" href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>
+      <img class="brand__logo" src="/assets/img/brand/kible-symbole.svg" alt="Kible" width="40" height="40">
+      <span class="brand__name" aria-hidden="true">kible</span>
+      <span class="visually-hidden"> – accueil</span>
+    </a>
+    <button class="nav-toggle js-only" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__label">Menu</span>
+      <span class="nav-toggle__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
     <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
-      <a href="/fonctionnalites/" {% if page.url == '/fonctionnalites/' %}aria-current="page"{% endif %}>Fonctionnalités</a>
-      <a href="/tarifs/" {% if page.url == '/tarifs/' %}aria-current="page"{% endif %}>Tarifs</a>
-      <a href="/contact/" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a>
-      <a class="nav-login" href="{{ site.appUrl }}">Se connecter</a>
-      <a class="button button-small" href="{{ site.appUrl }}">S'inscrire <span aria-hidden="true">→</span></a>
+      <ul class="site-nav__list">
+        {%- for item in navigation.main %}
+        {%- if item.children %}
+        {%- set parentCurrent = page.url.startsWith(item.match) %}
+        <li class="site-nav__item site-nav__item--has-submenu">
+          <span class="site-nav__link no-js-only">{{ item.label }}</span>
+          <button class="site-nav__link site-nav__submenu-toggle js-only" type="button" aria-expanded="false" aria-controls="submenu-{{ item.id }}"{% if parentCurrent %} data-current="true" aria-current="true"{% endif %}>
+            {{ item.label }}
+            <svg class="site-nav__caret" width="8" height="8" viewBox="0 0 10 10" aria-hidden="true" focusable="false"><path d="M1 3h8L5 8z" fill="currentColor"/></svg>
+          </button>
+          <ul class="site-nav__submenu" id="submenu-{{ item.id }}">
+            {%- for child in item.children %}
+            <li><a class="site-nav__sublink" href="{{ child.url }}"{% if page.url == child.url %} aria-current="page"{% endif %}>{{ child.label }}</a></li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- else %}
+        <li class="site-nav__item"><a class="site-nav__link" href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- endif %}
+        {%- endfor %}
+      </ul>
+      <ul class="site-nav__actions">
+        <li><a class="site-nav__link" href="{{ site.appUrl }}">Se connecter</a></li>
+        <li><a class="btn btn--grad btn--nav" href="{{ site.demoUrl }}"{% if page.url == site.demoUrl %} aria-current="page"{% endif %}>Demander une démo</a></li>
+      </ul>
     </nav>
   </div>
 </header>

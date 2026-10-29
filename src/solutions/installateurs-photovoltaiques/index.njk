@@ -1,0 +1,111 @@
+---
+title: "Logiciel de prospection pour installateurs photovoltaïques"
+description: "Organisez vos tournées, suivez vos rendez-vous et pilotez vos équipes d’installation solaire avec Kible. Demandez une démo."
+faqKey: photovoltaique
+faqCenter: true
+bodyClass: page-solution page-photovoltaique
+scripts: [timeline.js]
+---
+{% from "partials/cta-band.njk" import ctaBand %}
+{% include "illus/defs.njk" %}
+
+<section class="hero hero--solution" aria-labelledby="hero-titre">
+  {% include "partials/topo.njk" %}
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="hero__kicker">Kible pour les installateurs photovoltaïques</p>
+      <h1 class="hero__title hero__title--xl" id="hero-titre">La prospection solaire, enfin organisée</h1>
+      <p class="hero__lead">Toitures de maisons, bâtiments d’entreprise, ombrières de parking&nbsp;: le solaire se vend sur le terrain, un rendez-vous après l’autre. Et si vos équipes avaient tout ce qu’il leur faut, au même endroit&nbsp;? Kible les aide à cibler les bons secteurs, enchaîner les visites et tenir leurs objectifs.</p>
+      <p class="hero__actions">
+        <a class="btn btn--grad" href="/demo/">Demander une démo</a>
+        <a class="btn btn--secondary" href="https://app.kible.fr">Essayer Kible</a>
+      </p>
+    </div>
+    <div class="hero__visual hero__visual--ill" role="img" aria-label="Illustration : un téléphone et des fiches de prospection solaire, avec une maison équipée de panneaux">{% include "illus/pv-hero.njk" %}</div>
+  </div>
+</section>
+
+<section class="features-tl features-tl--page" aria-label="Les défis de la prospection solaire et les réponses de Kible">
+  <div class="container">
+    <div class="timeline">
+      <div class="timeline__track" aria-hidden="true"><span class="timeline__fill"></span><span class="timeline__badge"><img src="/assets/img/brand/kible-symbole.svg" alt="" width="30" height="30"></span></div>
+      <ol class="timeline__list">
+        <li class="tl-item tl-item--rev">
+          <div class="tl-item__text">
+            <h2 class="tl-item__title">Des secteurs choisis sur la carte, pas à l’instinct</h2>
+            <p>Quartiers pavillonnaires, zones d’activité aux grandes toitures&nbsp;: sans carte ni secteurs définis, certains territoires sont saturés pendant que d’autres sont oubliés.</p>
+            <p>Avec Kible, découpez votre territoire en secteurs, attribuez-les à vos commerciaux, planifiez vos tournées dans les zones pavillonnaires et repérez les entreprises à visiter pour leurs toitures ou leurs ombrières.</p>
+          </div>
+          <div class="tl-item__visual" role="img" aria-label="Illustration : une carte de quartier pavillonnaire avec les toitures à visiter mises en évidence">{% include "illus/pv-secteurs.njk" %}</div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-item__text">
+            <h2 class="tl-item__title">Des rendez-vous qui ne se perdent plus</h2>
+            <p>Un premier contact en porte-à-porte, un rendez-vous quelques jours plus tard, un retour du foyer&nbsp;: sans suivi partagé, l’information reste dans la tête de chacun.</p>
+            <p>Kible réunit les visites, les rendez-vous obtenus et les opportunités en cours au même endroit. Vous savez si le mois est sur la bonne trajectoire, et vous ajustez à temps.</p>
+          </div>
+          <div class="tl-item__visual" role="img" aria-label="Illustration : un téléphone confirme un rendez-vous, à côté d’un calendrier et des fiches de trois commerciaux">{% include "illus/pv-rdv.njk" %}</div>
+        </li>
+        <li class="tl-item tl-item--rev">
+          <div class="tl-item__text">
+            <h2 class="tl-item__title">Des commerciaux accompagnés dans la durée</h2>
+            <p>Autoconsommation, aides, prime à l’autoconsommation&nbsp;: le discours demande de la pédagogie et le porte-à-porte est exigeant. Sans objectifs ni retours réguliers, la motivation s’effrite.</p>
+            <p>Fixez des objectifs individuels, valorisez les progrès et donnez à chaque commercial des repères pour tenir dans la durée, même quand le terrain est difficile.</p>
+          </div>
+          <div class="tl-item__visual" role="img" aria-label="Illustration : un classement d’équipe, un podium et un message de coaching">{% include "illus/coaching.njk" %}</div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band band--center" aria-labelledby="band-titre">
+  <div class="container band__center">
+    <h2 class="band__title" id="band-titre">Donnez de l’élan à votre prospection solaire</h2>
+    <p class="band__text">Kible simplifie la prospection pour que vos équipes se concentrent sur l’essentiel&nbsp;: rencontrer des foyers et des entreprises, et les convaincre. Envie de voir ce que Kible peut changer pour votre activité&nbsp;?</p>
+    <p class="band__actions"><a class="btn btn--grad btn--sm" href="/demo/">Demander une démo</a></p>
+  </div>
+</section>
+
+<section class="modules" aria-labelledby="modules-titre">
+  <div class="container modules__inner">
+    <p class="modules__kicker">Plateforme</p>
+    <h2 class="modules__title" id="modules-titre">Tous les outils du terrain solaire</h2>
+    <p class="modules__text">Six modules réunis dans une seule application, pour les commerciaux comme pour la direction.</p>
+    {% include "partials/modules-list.njk" %}
+    <p><a class="btn btn--grad btn--sm" href="/fonctionnalites/">Voir toutes les fonctionnalités</a></p>
+  </div>
+</section>
+
+{% include "partials/faq.njk" %}
+
+<section class="posts" aria-labelledby="posts-titre">
+  <div class="container">
+    <div class="posts__head">
+      <h2 class="posts__title" id="posts-titre">Pour aller plus loin</h2>
+      <a class="link-arrow" href="/fonctionnalites/">Toutes les fonctionnalités{% icon "arrow" %}</a>
+    </div>
+    <ul class="posts__grid">
+      <li class="post">
+        <div class="post__img">{% include "illus/irve.njk" %}</div>
+        <h3 class="post__title"><a href="/solutions/installateurs-irve/">Vous installez aussi des bornes de recharge&nbsp;?</a></h3>
+        <p class="post__text">Wallbox chez un particulier, bornes en copropriété, recharge pour une flotte d’entreprise&nbsp;: Kible s’adapte aussi à l’IRVE.</p>
+        <p class="post__cta" aria-hidden="true"><span class="btn btn--grad btn--xs">Découvrir</span></p>
+      </li>
+      <li class="post">
+        <div class="post__img">{% include "illus/plateforme.njk" %}</div>
+        <h3 class="post__title"><a href="/fonctionnalites/">Toutes les fonctionnalités de la plateforme</a></h3>
+        <p class="post__text">Prospection sur carte, suivi d’activité, objectifs et coaching&nbsp;: découvrez le détail de chaque fonctionnalité.</p>
+        <p class="post__cta" aria-hidden="true"><span class="btn btn--grad btn--xs">Découvrir</span></p>
+      </li>
+      <li class="post">
+        <div class="post__img">{% include "illus/tarifs.njk" %}</div>
+        <h3 class="post__title"><a href="/tarifs/">Des offres adaptées à votre équipe</a></h3>
+        <p class="post__text">Quelques commerciaux ou une équipe terrain plus large&nbsp;: trouvez l’offre qui correspond à votre organisation.</p>
+        <p class="post__cta" aria-hidden="true"><span class="btn btn--grad btn--xs">Découvrir</span></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{{ ctaBand("Voyez comment Kible fonctionne", "Demandez une démo et voyez comment Kible organise la prospection de vos équipes d’installation photovoltaïque.", "cta-final") }}

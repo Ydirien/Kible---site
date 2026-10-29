@@ -2,13 +2,25 @@
   "name": "kible-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Site vitrine statique Kible, généré avec Eleventy.",
+  "description": "Site vitrine Kible (kible.fr)",
+  "type": "module",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "clean": "node -e \"require('fs').rmSync('_site', {recursive:true, force:true})\""
+    "clean": "node -e \"import('node:fs').then(f=>{f.rmSync('_site',{recursive:true,force:true});f.rmSync('.cache',{recursive:true,force:true})})\""
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.7",
+    "@11ty/eleventy-img": "^7.1.1",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/public-sans": "^5.3.0",
+    "@fontsource-variable/sora": "^5.3.0",
+    "@fontsource/archivo": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "html-minifier-terser": "^7.2.0",
+    "lightningcss": "^1.33.0"
   }
 }

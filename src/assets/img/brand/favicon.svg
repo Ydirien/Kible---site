@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <style>
+    .ring{stroke:#10203A}.k{stroke:#0AA463}
+    @media (prefers-color-scheme: dark){.ring{stroke:#E9EEE6}.k{stroke:#3EE695}}
+  </style>
+  <defs>
+    <clipPath id="c"><rect x="0" y="44" width="200" height="112"/></clipPath>
+    <clipPath id="g"><rect x="0" y="30" width="200" height="140"/></clipPath>
+    <mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+      <rect width="200" height="200" fill="#fff"/>
+      <g clip-path="url(#g)" stroke="#000" stroke-width="44" fill="none">
+        <line x1="72" y1="10" x2="72" y2="190"/><polyline points="162,10 72,100 162,190" stroke-linejoin="bevel"/>
+      </g>
+    </mask>
+  </defs>
+  <circle class="ring" mask="url(#m)" cx="100" cy="100" r="88" fill="none" stroke-width="18"/>
+  <g class="k" clip-path="url(#c)" stroke-width="26" fill="none">
+    <line x1="72" y1="30" x2="72" y2="170"/><polyline points="142,30 72,100 142,170" stroke-linejoin="bevel"/>
+  </g>
+</svg>
